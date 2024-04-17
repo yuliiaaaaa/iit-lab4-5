@@ -18,7 +18,7 @@ jobs:
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
       - name: Build Docker Image
-        run: docker build -t yulialutsenko/iit-lab4-5:v1.0 .
+        run: docker build -t yulialutsenko/iit-lab4-5:latest .
 
       - name: Push Docker Image
-        run: docker push yulialutsenko/iit-lab4-5:v1.0
+        run: docker push yulialutsenko/iit-lab4-5:latest
